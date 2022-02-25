@@ -104,9 +104,6 @@ class LoadCommands {
             }
             if (!Array.isArray(cmds)) cmds = [cmds];
 
-            debugs.push(
-                ``,
-            );
 
             for (const cmd of cmds) {
                 if (!isObject(cmd)) {
