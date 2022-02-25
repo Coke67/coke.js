@@ -102,6 +102,12 @@ class LoadCommands {
 
                 continue;
             }
+            
+            debugs.push(
+                ``,
+
+            );
+            
             for (const cmd of cmds) {
                 if (!isObject(cmd)) {
                     debugs.push(` Provided data is not an object`);
