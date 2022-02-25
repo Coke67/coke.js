@@ -105,9 +105,7 @@ class LoadCommands {
             if (!Array.isArray(cmds)) cmds = [cmds];
 
             debugs.push(
-                `|${this.colors?.walking || ""} Walking in ${name}${
-                    this.allColors.reset || ""
-                }|`,
+                ``,
             );
 
             for (const cmd of cmds) {
