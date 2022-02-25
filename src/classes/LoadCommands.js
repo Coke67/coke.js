@@ -160,7 +160,7 @@ class LoadCommands {
                 debugs.push(`|${this.colors.loaded?.command || ""}'${
                     cmd.name || cmd.channel
                 }'|${this.colors.loaded?.text || ""} Yüklendi ${this.allColors.reset || ""}|
-                |
+|
 |------------------------------------------|`);
             }
         }
