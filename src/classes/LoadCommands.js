@@ -166,9 +166,7 @@ class LoadCommands {
 
                 debugs.push(`|${this.colors.loaded?.command || ""}'${
                     cmd.name || cmd.channel
-                }' |${this.colors.loaded?.type || ""}${cmd.type} ${
-                    this.allColors.reset || ""
-                }|${this.colors.loaded?.text || ""}Yüklendi${this.allColors.reset || ""}|
+                }'|${this.colors.loaded?.text || ""} Yüklendi ${this.allColors.reset || ""}|
 |------------------------------------------|`);
             }
         }
