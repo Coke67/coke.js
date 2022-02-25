@@ -36,7 +36,7 @@ module.exports = async (client) => {
         );
     }
 console.log(
-        "\x1b[36mcoke.js Başlatıldı \x1b[0m|| \x1b[32m CokeJS" +
+        "\x1b[36mcoke.js Başlatıldı \x1b[0m|| \x1b[32m CokeJS-v" +
         require("../../../package.json").version 
     );
 };
