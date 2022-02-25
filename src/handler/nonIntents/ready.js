@@ -35,5 +35,10 @@ module.exports = async (client) => {
             chan,
         );
     }
-    console.log('Coke.JS Başlatıldı');;
+console.log(
+        "\x1b[36mcoke.js.js \x1b[0m|| \x1b[32mv Başlatıldı" +
+        "\x1b[36mcoke.js \x1b[0m|| \x1b[32m" +
+        require("../../../package.json").version +
+        "\x1b[0m || \x1b[36mLalayke Development\x1b[0m",
+    );
 };
