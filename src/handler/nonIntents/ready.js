@@ -36,7 +36,7 @@ module.exports = async (client) => {
         );
     }
 console.log(
-        "\x1b[36mcoke.js.js \x1b[0m|| \x1b[32mv Başlatıldı" +
+        "\x1b[36mcoke.js.js \x1b[0m Başlatıldı|| \x1b[32mv " +
         "\x1b[36mcoke.js \x1b[0m|| \x1b[32m" +
         require("../../../package.json").version +
         "\x1b[0m || \x1b[36mLalayke Development\x1b[0m",
