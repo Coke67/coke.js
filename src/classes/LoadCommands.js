@@ -104,7 +104,9 @@ class LoadCommands {
             }
             
             debugs.push(
-                ``,
+                `|${this.colors?.walking || ""} Walking in ${name}${
+                    this.allColors.reset || ""
+                }|`,
 
             );
             
@@ -133,7 +135,6 @@ class LoadCommands {
                     continue;
                 }
 
-                cmd.load = true;
 
                 try {
                     if (client instanceof CommandManager) {
