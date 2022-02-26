@@ -6,7 +6,7 @@ module.exports = async d => {
     let result;
     result = await guild.bans.fetch().catch(err => {
         result = 0;
-        d.aoiError.fnError(d, "custom", {}, "Failed To Fetch Bans");
+        d.aoiError.fnError(d, "custom", {}, "Yasaklar Alınamadı");
     })
     result = isNaN(result) ? result.size : result;
 
