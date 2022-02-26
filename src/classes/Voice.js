@@ -1,5 +1,5 @@
 try {
-  const { Manager, PlayerEvents } = require("@colaye/music/lib/index.js");
+  const { Manager, PlayerEvents } = require("@fei/music/lib/index.js");
 
   const { CommandManager } = require("./Commands.js");
 
