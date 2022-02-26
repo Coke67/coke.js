@@ -177,7 +177,7 @@ class LoadCommands {
             console.log(
                 `|  ${this.colors.loaded?.command || ""}Komut${
                     this.allColors.reset
-                }  |  ${this.colors.loaded?.type || ""}Tip${
+                }  |  ${this.colors.loaded?.type || ""}Tür${
                     this.allColors.reset
                 }  |  ${this.colors.loaded?.text}Durum${this.allColors.reset}  |
 |------------------------------------------|\n` + debugs.join("\n"),
