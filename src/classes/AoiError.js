@@ -167,40 +167,40 @@ class AoiError {
       case "message":
         ans = `\`ColayeError: ${d.func}: Geçersiz mesaj kimliği belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine})\``;
+        } (Satır : ${d.funcLine})\``;
         break;
       case "channel":
         ans = `\`ColayeError: ${d.func}: Geçersiz kanal kimliği belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine}\`)`;
+        } (Satır : ${d.funcLine}\`)`;
         break;
       case "user":
         ans = `\`ColayeError: ${d.func}: Geçersiz kullanıcı kimliği belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine})\``;
+        } (Satır : ${d.funcLine})\``;
         break;
       case "role":
         ans = `\`ColayeError: ${d.func}: Geçersiz rol belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine})\``;
+        } (Satır : ${d.funcLine})\``;
         break;
       case "guild":
         ans = `\`ColayeError: ${d.func}: Geçersiz sunucu kimliği belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine})\``;
+        } (Satır : ${d.funcLine})\``;
         break;
       case "emoji":
         ans = `\`ColayeError: ${d.func}: Geçersiz emoji kimliği belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine})\``;
+        } (Satır : ${d.funcLine})\``;
         break;
       case "option":
         ans = `\`ColayeError: ${d.func}: Geçersiz seçenek belirtildi: ${
           data.inside || ""
-        } (line : ${d.funcLine})\``;
+        } (Satır : ${d.funcLine})\``;
         break;
       case "custom":
-        ans = `\`ColayeError: ${d.func}: ${message} ${data.inside || ""} (line : ${
+        ans = `\`ColayeError: ${d.func}: ${message} ${data.inside || ""} (Satır : ${
           d.funcLine
         })\``;
         break;
