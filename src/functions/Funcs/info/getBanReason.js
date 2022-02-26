@@ -8,7 +8,7 @@ module.exports = async d => {
 
     let banned = guild.bans.cache.find(x => x.user.id = userId);
     if (!banned) banned = guild.bans.fetch(userId).catch(e => {
-        d.aoiError.fnError(d, 'custom', {}, 'Failed To Get Ban Data With Reason: ' + e);
+        d.aoiError.fnError(d, 'custom', {}, 'Şu Nedenle Yasak Verileri Alınamadı: ' + e);
     });
 
     data.result = banned?.reason;
