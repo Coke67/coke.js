@@ -106,7 +106,7 @@ class LoadCommands {
             if (!Array.isArray(cmds)) cmds = [cmds];
 
             debugs.push(
-                `|${this.colors?.walking || ""} Walking in ${name}${
+                `|${this.colors?.walking || ""} Şurada yürütülüyor: ${name}${
                     this.allColors.reset || ""
                 }|`,
             );
@@ -118,7 +118,7 @@ class LoadCommands {
                     continue;
                 }
 
-                if (!("type" in cmd)) cmd.type = "default";
+                if (!("type" in cmd)) cmd.type = "Klasik";
 
                 const valid = validCmds.some((c) => c === cmd.type);
 
@@ -155,7 +155,7 @@ class LoadCommands {
                             cmd.name || cmd.channel
                         }'| ${this.colors.failLoad?.type || ""}${cmd.type}${
                             this.allColors.reset
-                        }| ${this.colors.failLoad?.text || ""}Failed To Load${
+                        }| ${this.colors.failLoad?.text || ""}Yüklenemedi${
                             this.allColors.reset
                         }|
 |-------------------------------------------|`,
@@ -168,7 +168,7 @@ class LoadCommands {
                     cmd.name || cmd.channel
                 }' |${this.colors.loaded?.type || ""}${cmd.type} ${
                     this.allColors.reset || ""
-                }|${this.colors.loaded?.text || ""}Loaded${this.allColors.reset || ""}|
+                }|${this.colors.loaded?.text || ""}Yüklendi${this.allColors.reset || ""}|
 |------------------------------------------|`);
             }
         }
