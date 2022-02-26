@@ -18,7 +18,7 @@ class InviteSystem extends EventEmitter {
         }
 
         this.on("FINISHED", () => {
-            console.log("Fetched All Invites");
+            console.log("Tüm Davetler Alındı");
             this.timeStamp = Date.now();
             this.ready = true;
         });
