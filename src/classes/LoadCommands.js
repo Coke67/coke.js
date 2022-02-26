@@ -85,7 +85,7 @@ class LoadCommands {
                 cmds = require(name);
             } catch {
                 debugs.push(
-                    `${this.colors.failedWalking?.text || ""} Failed to walk in ${
+                    `${this.colors.failedWalking?.text || ""} Dosyası Yürütülürken Bir Hata Oluştu ${
                         this.colors.failedWalking?.name || ""
                     }${name}${this.allColors.reset || ""}`,
                 );
@@ -95,7 +95,7 @@ class LoadCommands {
 
             if (cmds == null) {
                 debugs.push(
-                    `${this.colors.noData?.text || ""} No data provided in ${
+                    `${this.colors.noData?.text || ""} Hiçbir veri sağlanmadı ${
                         this.colors.noData?.name || ""
                     }${name}${this.allColors.reset || ""}`,
                 );
@@ -107,7 +107,7 @@ class LoadCommands {
 
             for (const cmd of cmds) {
                 if (!isObject(cmd)) {
-                    debugs.push(` Provided data is not an object`);
+                    debugs.push(` Sağlanan veriler bir nesne değil`);
 
                     continue;
                 }
@@ -148,7 +148,7 @@ class LoadCommands {
                             cmd.name || cmd.channel
                         }'| ${this.colors.failLoad?.type || ""}${cmd.type}${
                             this.allColors.reset
-                        }| ${this.colors.failLoad?.text || ""}Yüklenemedi${
+                        }| ${this.colors.failLoad?.text || ""} Yüklenemedi ${
                             this.allColors.reset
                         }|
 |-------------------------------------------|`,
