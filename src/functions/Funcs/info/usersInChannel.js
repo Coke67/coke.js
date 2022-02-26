@@ -15,7 +15,7 @@ module.exports = async (d) => {
       d,
       "custom",
       { inside: data.inside },
-      "Channel Type Is Not Voice/Stage",
+      "Kanal Türü Ses/Sahne Değil",
     );
 
   data.result = channel.members
