@@ -14,19 +14,19 @@ class Blacklist {
 
     setBlacklist(type, errorMsg) {
         if (!this.types.includes(type))
-            AoiError.consoleError("BlacklistTypeError", "Invalid Type Provided");
+            AoiError.consoleError("BlacklistTypeError", "Geçersiz Tür Sağlandı");
         this[type].errorMsg = errorMsg;
     }
 
     blacklistIds(type, ...ids) {
         if (!this.types.includes(type))
-            AoiError.consoleError("BlacklistTypeError", "Invalid Type Provided");
+            AoiError.consoleError("BlacklistTypeError", "Geçersiz Tür Sağlandı");
         this[type].blacklist.squash(...ids);
     }
 
     whitelistIds(type, ...ids) {
         if (!this.types.includes(type))
-            AoiError.consoleError("BlacklistTypeError", "Invalid Type Provided");
+            AoiError.consoleError("BlacklistTypeError", "Geçersiz Tür Sağlandı");
         ids.forEach((x) => {
             this[type].blacklist.delete(x);
         });
