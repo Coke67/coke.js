@@ -170,7 +170,7 @@ class AoiError {
         } (line : ${d.funcLine})\``;
         break;
       case "channel":
-        ans = `\`ColayeError: ${d.func}: Geçersiz kanal kimliği belirtildi: ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz mesaj/kanal kimliği belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine}\`)`;
         break;
