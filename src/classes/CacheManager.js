@@ -28,8 +28,8 @@ class CacheManager {
     createCache(type, name, options) {
         if (!this._validType(type))
             return AoiError.consoleError(
-                "CacheManagerError",
-                "Wrong Cache Type Provided",
+                "Önbellek Yöneticisi Hatası",
+                "Yanlış Önbellek Türü Sağlandı",
             );
 
         this.caches[type][name] = new Cachers[type](options);
@@ -39,8 +39,8 @@ class CacheManager {
     deleteCache(type, name) {
         if (!this.validType(type))
             return AoiError.consoleError(
-                "CacheManagerError",
-                "Wrong Cache Type Provided",
+                "Önbellek Yöneticisi Hatası",
+                "Yanlış Önbellek Türü Sağlandı",
             );
 
         delete this.cache[type][name];
