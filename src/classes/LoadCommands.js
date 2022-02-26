@@ -118,7 +118,7 @@ class LoadCommands {
                     continue;
                 }
 
-                if (!("type" in cmd)) cmd.type = "default";
+                if (!("type" in cmd)) cmd.type = "Klasik";
 
                 const valid = validCmds.some((c) => c === cmd.type);
 
