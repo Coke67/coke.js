@@ -1,6 +1,6 @@
 {
   "name": "colaye.js",
-  "version": "0.0.1-beta",
+  "version": "1.0.0-beta",
   "description": "colaye.js - Kolayca Discord botları yapmak için güzel bir paket, hem de Türkçe!",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
