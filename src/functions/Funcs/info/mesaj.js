@@ -3,7 +3,7 @@ module.exports = async d => {
 
     const [args] = inside.splits;
 
-    if (isNaN(args) && args < 1) return d.aoiError.fnError(d, "custom", {inside}, "Invalid Index Provided In");
+    if (isNaN(args) && args < 1) return d.aoiError.fnError(d, "custom", {inside}, "Geçersiz index(dizin) sağlandı.");
 
     const result = args ? d.args[args - 1]?.deleteBrackets() : d.args.join(" ")?.deleteBrackets();
 
