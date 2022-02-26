@@ -85,7 +85,7 @@ class LoadCommands {
                 cmds = require(name);
             } catch {
                 debugs.push(
-                    `${this.colors.failedWalking?.text || ""} Failed to walk in ${
+                    `${this.colors.failedWalking?.text || ""} Yürütülemedi: ${
                         this.colors.failedWalking?.name || ""
                     }${name}${this.allColors.reset || ""}`,
                 );
@@ -95,7 +95,7 @@ class LoadCommands {
 
             if (cmds == null) {
                 debugs.push(
-                    `${this.colors.noData?.text || ""} No data provided in ${
+                    `${this.colors.noData?.text || ""} Data belirtilmedi ${
                         this.colors.noData?.name || ""
                     }${name}${this.allColors.reset || ""}`,
                 );
@@ -118,7 +118,7 @@ class LoadCommands {
                     continue;
                 }
 
-                if (!("type" in cmd)) cmd.type = "Klasik";
+                if (!("type" in cmd)) cmd.type = "default";
 
                 const valid = validCmds.some((c) => c === cmd.type);
 
