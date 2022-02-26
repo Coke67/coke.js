@@ -106,7 +106,7 @@ class LoadCommands {
             if (!Array.isArray(cmds)) cmds = [cmds];
 
             debugs.push(
-                `|${this.colors?.walking || ""} Şurada yürütülüyor: ${name}${
+                `|${this.colors?.walking || ""} Yürütülüyor: ${name}${
                     this.allColors.reset || ""
                 }|`,
             );
@@ -118,7 +118,7 @@ class LoadCommands {
                     continue;
                 }
 
-                if (!("type" in cmd)) cmd.type = "Klasik";
+                if (!("type" in cmd)) cmd.type = "default";
 
                 const valid = validCmds.some((c) => c === cmd.type);
 
@@ -130,7 +130,7 @@ class LoadCommands {
                             cmd.type
                         } ${this.allColors.reset}|${
                             this.colors.typeError?.text || ""
-                        }Invalid Type Provided${this.allColors.reset}|`,
+                        }Geçersiz komut tipi${this.allColors.reset}|`,
                     );
 
                     continue;
@@ -175,11 +175,11 @@ class LoadCommands {
 
         if (debug) {
             console.log(
-                `|  ${this.colors.loaded?.command || ""}Command${
+                `|  ${this.colors.loaded?.command || ""}Komut${
                     this.allColors.reset
-                }  |  ${this.colors.loaded?.type || ""}Type${
+                }  |  ${this.colors.loaded?.type || ""}Tip${
                     this.allColors.reset
-                }  |  ${this.colors.loaded?.text}State${this.allColors.reset}  |
+                }  |  ${this.colors.loaded?.text}Durum${this.allColors.reset}  |
 |------------------------------------------|\n` + debugs.join("\n"),
             );
         }
