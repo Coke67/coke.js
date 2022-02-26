@@ -12,10 +12,10 @@ class CustomEvent extends EventEmitter {
 
     command(d = {}) {
         if (!d.listen) {
-            throw new TypeError(`Listen is not provided in ${d.name}`);
+            throw new TypeError(`${d.name} içinde dinleme sağlanamıyor`);
         }
         if (!d.code) {
-            throw new TypeError(`Code is not provided in ${d.name}`);
+            throw new TypeError(`${d.name} içinde kod belirtilmedi`);
         }
 
         this.commands.set(d.name, d);
