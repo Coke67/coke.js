@@ -49,16 +49,16 @@ class LoadCommands {
 
         if (typeof path !== "string")
             throw new TypeError(
-                `Expecting typeof string on 'path' parameter, get '${typeof path}' instead`,
+                `'path' parametresinde typeof dizini bekleniyor, Bunun yerine '${typeof path}' alındı.`,
             );
 
         if (!PATH.isAbsolute(path)) path = PATH.resolve(path);
 
         try {
             if (await fs.promises.stat(path).then((f) => !f.isDirectory()))
-                throw new Error("Error!");
+                throw new Error("Hata!");
         } catch {
-            throw new TypeError("Path is not a valid directory!");
+            throw new TypeError("Yol geçerli bir dizin değil!");
         }
 
         const index = this.paths.findIndex((d) => d.path === path);
@@ -85,7 +85,7 @@ class LoadCommands {
                 cmds = require(name);
             } catch {
                 debugs.push(
-                    `${this.colors.failedWalking?.text || ""} Failed to walk in ${
+                    `${this.colors.failedWalking?.text || ""} Yürütülemedi: ${
                         this.colors.failedWalking?.name || ""
                     }${name}${this.allColors.reset || ""}`,
                 );
@@ -95,7 +95,7 @@ class LoadCommands {
 
             if (cmds == null) {
                 debugs.push(
-                    `${this.colors.noData?.text || ""} No data provided in ${
+                    `${this.colors.noData?.text || ""} Hiçbir veri sağlanmadı ${
                         this.colors.noData?.name || ""
                     }${name}${this.allColors.reset || ""}`,
                 );
@@ -106,14 +106,14 @@ class LoadCommands {
             if (!Array.isArray(cmds)) cmds = [cmds];
 
             debugs.push(
-                `|${this.colors?.walking || ""} Walking in ${name}${
+                `|${this.colors?.walking || ""} Yürütülüyor: ${name}${
                     this.allColors.reset || ""
                 }|`,
             );
 
             for (const cmd of cmds) {
                 if (!isObject(cmd)) {
-                    debugs.push(` Provided data is not an object`);
+                    debugs.push(` Sağlanan veriler bir nesne değil`);
 
                     continue;
                 }
@@ -155,7 +155,7 @@ class LoadCommands {
                             cmd.name || cmd.channel
                         }'| ${this.colors.failLoad?.type || ""}${cmd.type}${
                             this.allColors.reset
-                        }| ${this.colors.failLoad?.text || ""}Failed To Load${
+                        }| ${this.colors.failLoad?.text || ""}Yüklenemedi${
                             this.allColors.reset
                         }|
 |-------------------------------------------|`,
@@ -168,18 +168,18 @@ class LoadCommands {
                     cmd.name || cmd.channel
                 }' |${this.colors.loaded?.type || ""}${cmd.type} ${
                     this.allColors.reset || ""
-                }|${this.colors.loaded?.text || ""}Loaded${this.allColors.reset || ""}|
+                }|${this.colors.loaded?.text || ""}Yüklendi${this.allColors.reset || ""}|
 |------------------------------------------|`);
             }
         }
 
         if (debug) {
             console.log(
-                `|  ${this.colors.loaded?.command || ""}Command${
+                `|  ${this.colors.loaded?.command || ""}Komut${
                     this.allColors.reset
-                }  |  ${this.colors.loaded?.type || ""}Type${
+                }  |  ${this.colors.loaded?.type || ""}Tip${
                     this.allColors.reset
-                }  |  ${this.colors.loaded?.text}State${this.allColors.reset}  |
+                }  |  ${this.colors.loaded?.text}Durum${this.allColors.reset}  |
 |------------------------------------------|\n` + debugs.join("\n"),
             );
         }
