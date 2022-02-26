@@ -5,7 +5,7 @@ module.exports = async d => {
     const data = d.util.openFunc(d);
     let [...perms] = data.inside.splits;
 
-    if (perms.some(perm => !Perms[perm] && !Permissions.FLAGS[perm] && isNaN(perm))) return d.aoiError.fnError(d, 'custom', {inside: data.inside}, 'Invalid Perm(s) Provided In');
+    if (perms.some(perm => !Perms[perm] && !Permissions.FLAGS[perm] && isNaN(perm))) return d.aoiError.fnError(d, 'custom', {inside: data.inside}, 'Sağlanan Geçersiz İzin(ler)');
     perms = perms.map(perm => Perms[perm] || Permissions.FLAGS[perm] || perm);
     data.result = d.client.generateInvite({
         scopes: ['bot', 'applications.commands'],
