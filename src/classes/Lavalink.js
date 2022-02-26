@@ -22,36 +22,36 @@ class Lavalink extends EventEmitter {
             },
         });
         lavalink.on("nodeConnect", (node) =>
-            this.debug(`Node ${node.options.url} connected`),
+            this.debug(`Node ${node.options.url} bağlandı`),
         );
         lavalink.on("nodeDisconnect", (node) =>
-            this.debug(`Node ${node.options.url} disconnected`),
+            this.debug(`Node ${node.options.url} bağlantı kesildi`),
         );
         lavalink.on("playerCreate", (p) =>
-            this.debug(`Player created for GUILD(${p.options.guildID})`),
+            this.debug(`Oynatıcı oluşturuldu GUILD(${p.options.guildID})`),
         );
         lavalink.on("playerDestroy", (p) =>
-            this.debug(`Player destroyed for GUILD(${p.options.guildID})`),
+            this.debug(`Oynatıcı yok edildi GUILD(${p.options.guildID})`),
         );
         // lavalink.on("playerReplay", (p) => {
         //     this.debug(`Player replayed for GUILD(${p.options.guildID})`);
         //     this.emit("trackReplayed", p, p.queue.current);
         // });
         lavalink.on("trackStart", (p, track) => {
-            this.debug(`Player starting track for GUILD(${p.options.guildID})`);
+            this.debug(`GUILD(${p.options.guildID}) için başlangıç`);
             this.handleEvent("start", p, track);
         });
         lavalink.on("trackEnd", (p, track, reason) => {
-            this.debug(`Player ended track for GUILD(${p.options.guildID})`);
+            this.debug(`GUILD(${p.options.guildID}) için sıra bitirildi`);
             this.handleEvent("end", p, track, reason);
         });
         lavalink.on("trackStuck", (p, track, reason) => {
-            this.debug(`Player sent STUCK for GUILD(${p.options.guildID})`);
+            this.debug(`GUILD(${p.options.guildID}) için stuck gönderildi.`);
             p.queue.current = undefined;
             this.handleEvent("end", p, track, reason);
         });
         lavalink.on("trackError", (p, track, reason) => {
-            this.debug(`Player sent EXCEPTION for GUILD(${p.options.guildID})`);
+            this.debug(`Oynatıcı için İSTİSNA gönderildi GUILD(${p.options.guildID})`);
             p.queue.current = undefined;
             this.handleEvent("end", p, track, reason);
         });
@@ -64,8 +64,8 @@ class Lavalink extends EventEmitter {
     }
 
     _validate(command) {
-        if (!command.channel) return new Error("Channel is required");
-        if (!command.code) return new Error("Code is required");
+        if (!command.channel) return new Error("Kanal gerekli");
+        if (!command.code) return new Error("Kod gerekli");
     }
 
     /**
@@ -168,7 +168,7 @@ class Lavalink extends EventEmitter {
      * @param {import("leref.ts/dist/utils/typings").NodeOptions} options
      */
     addNode(options) {
-        console.log(" \x1b[33mConnected with Lavalink Node: " + options.name + "\x1b[0m")
+        console.log(" \x1b[33mBağlandı Lavalink Node: " + options.name + "\x1b[0m")
         return this.lavalink.add(options);
     }
 
