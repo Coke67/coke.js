@@ -14,9 +14,9 @@ module.exports = async (d) => {
             {inside},
             `${
                 isNaN(n)
-                    ? "Invalid Number in "
+                    ? "Geçersiz Numara "
                     : isNaN(d)
-                        ? "Invalid Decimal Position in"
+                        ? "Geçersiz Ondalık Konum"
                         : ""
             }`,
         );
