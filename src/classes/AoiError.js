@@ -9,8 +9,8 @@ const { Interaction } = require("discord.js");
 
 class AoiError {
   constructor() {
-    const error = new Error(`Cannot initialize "AoiError" Class`);
-    error.name = "AoiError";
+    const error = new Error(`"ColayeError" hata oluşturdu.`);
+    error.name = "ColayeError";
     throw error;
   }
 
@@ -22,7 +22,7 @@ class AoiError {
    */
   static CallbackError(callback, intent, line) {
     const error = new Error(
-      `(Missing Intents) : "${callback}" requires "${intent}" intent.`,
+      `(Eksik Intent) : "${callback}" şu intenti gerektiriyor: "${intent}".`,
     );
     error.name = "CallbackError";
     error.fileName = "./Bot.js";
@@ -40,13 +40,13 @@ class AoiError {
   static CommandError(command, type, name, position) {
     if (type === "name") {
       const error = new Error(
-        `AoiError: "Name" property is missing in "${command}" (position: ${position})`,
+        `ColayeError: "İsim" özelliği şurada eksik: "${command}" (Pozisyon (kod satırı): ${position})`,
       );
       error.name = "CommandNameError";
       throw error;
     } else if (type === "code") {
       const error = new Error(
-        `AoiError: "Code" is not provided in "${
+        `ColayeError: "Kod" belirtilmedi: "${
           name || "the Command"
         }" : ${command} (position: ${position})`,
       );
@@ -54,7 +54,7 @@ class AoiError {
       throw error;
     } else if (type === "channel") {
       const error = new Error(
-        `AoiError: "Channel" is not provided in "${
+        `ColayeError: "Kanal" belirtilmedi: "${
           name || "the Command"
         }" : ${command} (position: ${position})`,
       );
@@ -165,42 +165,42 @@ class AoiError {
     let ans;
     switch (type) {
       case "message":
-        ans = `\`AoiError: ${d.func}: Invalid Message ID Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz mesaj kimliği belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine})\``;
         break;
       case "channel":
-        ans = `\`AoiError: ${d.func}: Invalid Channel ID Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz kanal kimliği belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine}\`)`;
         break;
       case "user":
-        ans = `\`AoiError: ${d.func}: Invalid User ID Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz kullanıcı kimliği belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine})\``;
         break;
       case "role":
-        ans = `\`AoiError: ${d.func}: Invalid Role Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz rol belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine})\``;
         break;
       case "guild":
-        ans = `\`AoiError: ${d.func}: Invalid Guild ID Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz sunucu kimliği belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine})\``;
         break;
       case "emoji":
-        ans = `\`AoiError: ${d.func}: Invalid Emoji ID Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz emoji kimliği belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine})\``;
         break;
       case "option":
-        ans = `\`AoiError: ${d.func}: Invalid Option Provided In ${
+        ans = `\`ColayeError: ${d.func}: Geçersiz seçenek belirtildi: ${
           data.inside || ""
         } (line : ${d.funcLine})\``;
         break;
       case "custom":
-        ans = `\`AoiError: ${d.func}: ${message} ${data.inside || ""} (line : ${
+        ans = `\`ColayeError: ${d.func}: ${message} ${data.inside || ""} (line : ${
           d.funcLine
         })\``;
         break;
