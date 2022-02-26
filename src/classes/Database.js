@@ -337,8 +337,8 @@ class CustomDb extends Database {
 
         if (!method)
             return AoiError.consoleError(
-                "DatabaseSupportError",
-                "This Database Is Not Supported, Make an issue at aoi.js Github",
+                "Veritabanı Desteklenmiyor",
+                "Bu Veritabanı Desteklenmiyor, aoi.js Github'da bir sorun açın.",
             );
         this.tables.forEach(
             (x) => (this.tableList[x] = new this.module[method](x)),
@@ -350,8 +350,8 @@ class CustomDb extends Database {
             this.tableList[table].set(!id ? name : `${name}_${id}`, value);
         } catch (e) {
             AoiError.consoleError(
-                "DatabaseSupportError",
-                "This Database Is Not Supported, Make an issue at aoi.js Github",
+                "Veritabanı Desteklenmiyor",
+                "Bu Veritabanı Desteklenmiyor, aoi.js Github'da bir sorun açın.",
             );
         }
     }
@@ -364,8 +364,8 @@ class CustomDb extends Database {
             return typeof eee === "object" ? eee : {value: eee};
         } catch (e) {
             AoiError.consoleError(
-                "DatabaseSupportError",
-                "This Database Is Not Supported, Make an issue at aoi.js Github",
+                "Veritabanı Desteklenmiyor",
+                "Bu Veritabanı Desteklenmiyor, aoi.js Github'da bir sorun açın.",
             );
         }
     }
@@ -407,8 +407,8 @@ class CustomDb extends Database {
                         );
                     } else {
                         AoiError.consoleError(
-                            "DatabaseSupportError",
-                            "This Database Is Not Supported, Make an issue at aoi.js Github",
+                            "Veritabanı Desteklenmiyor",
+                            "Bu Veritabanı Desteklenmiyor, aoi.js Github'da bir sorun açın.",
                         );
                     }
                 });
@@ -416,8 +416,8 @@ class CustomDb extends Database {
             }
         } catch (e) {
             AoiError.consoleError(
-                "DatabaseSupportError",
-                "This Database Is Not Supported, Make an issue at aoi.js Github",
+                "Veritabanı Desteklenmiyor",
+                "Bu Veritabanı Desteklenmiyor, aoi.js Github'da bir sorun açın.",
             );
         }
     }
@@ -427,8 +427,8 @@ class CustomDb extends Database {
             this.tableList[table].delete(!id ? name : `${name}_${id}`);
         } catch (e) {
             AoiError.consoleError(
-                "DatabaseSupportError",
-                "This Database Is Not Supported, Make an issue at aoi.js Github",
+                "Veritabanı Desteklenmiyor",
+                "Bu Veritabanı Desteklenmiyor, aoi.js Github'da bir sorun açın.",
             );
         }
     }
