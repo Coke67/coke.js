@@ -36,9 +36,9 @@ module.exports = async (client) => {
         );
     }
     console.log(
-        "Initialized on \x1b[36maoi.js \x1b[0m|| \x1b[32mv" +
+        "\x1b[36mfei.js \x1b[0m|| \x1b[32mv" +
         require("../../../package.json").version +
-        "\x1b[0m || \x1b[36mAkarui Development\x1b[0m",
+        "\x1b[0m || \x1b[36mFei Development\x1b[0m",
     );
-    console.log("Official Discord Server: https://discord.gg/HMUfMXDQsV");
+    console.log("Resmi Discord Sunucumuz: https://discord.gg/T7cDm3XC6x");
 };
