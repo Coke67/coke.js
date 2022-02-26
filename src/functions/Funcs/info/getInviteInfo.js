@@ -11,7 +11,7 @@ module.exports = async (d) => {
             d,
             "custom",
             {},
-            `Failed To Get Invite Data With Reason: ${e}`,
+            `Şu Nedenle Davet Bilgileri Alınamadı: ${e}`,
         );
     });
 
