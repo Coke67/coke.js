@@ -25,7 +25,7 @@ module.exports = async (d) => {
 
   time = Time.parse(time)?.ms;
   if (!time)
-    d.aoiError.fnError(d, "custom", { inside }, "Invalid Time Provided In");
+    d.aoiError.fnError(d, "custom", { inside }, "Geçersiz Zaman Sağlandı");
 
   commands = commands.split(",");
   commands.forEach((cmd) => {
@@ -38,7 +38,7 @@ module.exports = async (d) => {
         d,
         "custom",
         {},
-        "Awaited Command: " + cmd + " Doesn't Exist",
+        "Beklenen Komut: " + cmd + " Yok",
       );
   });
 
@@ -46,7 +46,7 @@ module.exports = async (d) => {
     try {
       data = JSON.parse(data);
     } catch (e) {
-      d.aoiError.fnError(d, "custom", { inside }, "Invalid Data Provided In");
+      d.aoiError.fnError(d, "custom", { inside }, "Geçersiz Veri Sağlandı");
     }
   }
   d.message
@@ -66,7 +66,7 @@ module.exports = async (d) => {
           d,
           "custom",
           {},
-          "Invalid Await Command: " + commands[index],
+          "Geçersiz Await Komudu: " + commands[index],
         );
       await d.interpreter(
         d.client,
