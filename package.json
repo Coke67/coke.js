@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AkaruiDevelopment/aoi.js.git"
+    "url": "git+https://github.com/ColayeDevelopment/colaye.js.git"
   },
   "keywords": [
     "aoi.js",
@@ -41,7 +41,11 @@
     "bdfd",
     "Bot Designer for Discord",
     "discord",
-    "discordbot"
+    "discordbot",
+    "colaye",
+    "cola",
+    "lyke",
+    "lalayke"
   ],
   "dependencies": {
     "axios": "^0.24.0",
@@ -52,7 +56,7 @@
     "node": "^17.4.0"
   },
   "devDependencies": {
-    "@akarui/aoi.music": "github:akaruidevelopment/music#main",
+    "@colaye/music": "github:ColayeDevelopment/music#main",
     "prettier": "^2.4.1",
     "typescript": "^4.5.2",
     "ws": "^8.3.0"
