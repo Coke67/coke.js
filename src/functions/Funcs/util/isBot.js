@@ -5,7 +5,7 @@ module.exports = async (d) => {
 
     const user = await d.util.getUser(d, userId);
 
-    data.result = user?.bot ? evet : hayır;
+    data.result = user?.bot ? true : false;
 
     return {
         code: d.util.setCode(data),
