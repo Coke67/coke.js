@@ -19,7 +19,7 @@ module.exports = async (d) => {
       d,
       "custom",
       { inside: data.inside },
-      "Invalid Index Provided In",
+      "Geçersiz Dizin Sağlandı",
     );
 
   const audit = await guild
@@ -33,7 +33,7 @@ module.exports = async (d) => {
         d,
         "custom",
         {},
-        "Failed To Get Audit Logs With Reason: " + e,
+        "Denetim Günlükleri Şu Sebeple Alınamadı: " + e,
       );
     });
 
