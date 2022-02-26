@@ -1,5 +1,5 @@
 try {
-  const { Manager, PlayerEvents } = require("@akarui/aoi.music/lib/index.js");
+  const { Manager, PlayerEvents } = require("@colaye/music/lib/index.js");
 
   const { CommandManager } = require("./Commands.js");
 
@@ -133,7 +133,7 @@ try {
 } catch (e) {
   class Voice {
     constructor() {
-      throw new Error("install @akarui/aoi.music to use this feature");
+      throw new Error("install @colaye/music to use this feature");
     }
   }
   module.exports = Voice;
