@@ -15,7 +15,7 @@ module.exports = async (d) => {
       d,
       "custom",
       { inside: data.inside },
-      "Provided ChannelId Is Not Voice/Stage Channel In",
+      "Sağlanan Kanal Id Ses/Sahne Kanalı İçinde Değil",
     );
 
   if (!d.client.voiceManager)
@@ -23,7 +23,7 @@ module.exports = async (d) => {
       d,
       "custom",
       {},
-      "Voice Class Is Not Initialised.",
+      "Ses Sınıfı Başlatılmamış.",
     );
 
   try {
@@ -35,7 +35,7 @@ module.exports = async (d) => {
       debug: debug === "yes",
     });
   } catch (e) {
-    d.aoiError.fnError(d, "custom", {}, "Failed To Join Vc With Reason: " + e);
+    d.aoiError.fnError(d, "custom", {}, "Şu Nedenle Sese Katılamadım:: " + e);
   }
 
   return {
